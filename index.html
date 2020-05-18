@@ -13,11 +13,87 @@
   </head>
   <body>
     <div data-role="page" id="inicial">
+      <div
+        data-role="panel"
+        id="mypanel"
+        data-display="push"
+        data-position="right"
+      >
+        Este es un panel lateral
+      </div>
+      <!-- /panel -->
+
+      <div data-role="header" data-position="fixed">
+        <h1>Inicio</h1>
+      </div>
+
       <div role="main" class="ui-content">
-        <a href="#login" class="ui-btn ui-corner-all">Ingresar</a>
-        <a href="#registro" class="ui-btn ui-corner-all">Registrarse</a>
+        <ul data-role="listview" data-inset="true">
+          <li>
+            <a href="#">
+              <img src="https://via.placeholder.com/80x80?text=Avatar 1" />
+              <h2>Castelblanco <small>Oliver</small></h2>
+              <p>Estados Unidos</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="https://via.placeholder.com/80x80?text=Avatar 2" />
+              <h2>Bogotá</h2>
+              <p>Colombia</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="https://via.placeholder.com/80x80?text=Avatar 3" />
+              <h2>Wolfgang Amadeus Phoenix</h2>
+              <p>Phoenix</p>
+            </a>
+          </li>
+        </ul>
+        <a
+          href="#popupDialog"
+          data-rel="popup"
+          data-position-to="window"
+          data-transition="pop"
+          class="ui-btn ui-corner-all">
+          Abrir ventana
+        </a>
+        <div
+          data-role="popup"
+          id="popupDialog"
+          data-dismissible="false">
+          <div data-role="header">
+            <h1>¿Aceptas los cambios?</h1>
+          </div>
+          <div role="main" class="ui-content">
+            <h3 class="ui-title">
+              ¿Estás seguro de lo que estás haciendo?
+            </h3>
+            <p>This action cannot be undone.</p>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back"> Cancelar </a>
+            <a
+              href="#"
+              class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"
+              data-rel="back"
+              data-transition="flow"
+              >Aceptar</a
+            >
+          </div>
+        </div>
       </div>
       <!-- /content -->
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#" data-icon="home"></a></li>
+            <li><a href="#" data-icon="camera"></a></li>
+            <li><a href="#" data-icon="gear"></a></li>
+          </ul>
+        </div>
+        <!-- /navbar -->
+      </div>
     </div>
     <!-- /page -->
 
@@ -37,8 +113,8 @@
       </div>
       <!-- /footer -->
     </div>
-    
-        <div data-role="page" id="registro">
+
+    <div data-role="page" id="registro">
       <div data-role="header">
         <h1>Título de la página</h1>
       </div>
@@ -54,7 +130,7 @@
       </div>
       <!-- /footer -->
     </div>
-    
+
     <!-- /page -->
   </body>
 </html>
